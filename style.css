@@ -3,6 +3,7 @@
     .header {
         background-color: var(--negrosecundario);
         width: 100%;
+        position: relative;
     }
     .nav {
         display: flex;
@@ -22,7 +23,7 @@
         width: 25px;
     }
 
-    /* Nav menu */
+    /* Nav menu burguer */
 
     .nav__input {
         display: none;
@@ -33,6 +34,10 @@
     .nav__icon {
         font-size: 36px;
         color: white;
+    }
+    .nav__menu {
+        position: relative;
+        display: none;
     }
 
 /* close nav menu */
@@ -216,15 +221,68 @@
 /* Header  */
 
     @media screen and (max-width: 768px){
+  
+
+ /*  Nav menu burguer  */
 
     .nav {
         position: fixed;
+        z-index: 150;
         top: 0;
     }    
     .nav__label {
         display: inline-block;
     }
+    
+    .nav__menu {
+        
+        position: absolute;
+        top: 70px;
+        padding-bottom: 70px; /* Corregir nav fixed */
+        left: 0;
+        transform: translatex(-5000px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        height: 100vh;
+        width: 100%;
+        z-index: 100;
+        background-color: var(--negrosecundario);
+    }
+    .nav__input:checked ~ .nav__menu {
+        transform: translatex(0);
+        transition: all .5s;
+    }
+
+    .nav__menu-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8vh;
+    }
+  
+    .nav__menu-link {
+        font-family: var(--fonttittle);
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+
+        position: relative;
+        user-select: none;
+    }
+    .nav__menu-link:active {
+        color: var(--amarilloprimario);
+        transform: scale(1.3);
+    }
+  
+
+
+/* Header contain */
+
     .navlist {
+        position: relative;
         display: none;
     }
     .header__container-img {
@@ -233,6 +291,7 @@
 
     .card-info {
         justify-content: space-between;
+        gap: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -246,7 +305,9 @@
         opacity: 0;
     }
     .card-info__h2 {
-        padding: 20vw 50px 0 50px;
+        font-size: 48px;
+        line-height: 90%;
+        padding: 15vw 50px 0 50px;
     }
     .card-info__p {
         padding: 30px 50px 30px 50px;
@@ -281,14 +342,67 @@
         padding: 10px 20px;
         width: 150px;
         background-color: var(--negrosecundario);
-        border-right: 20px solid var(--amarilloprimario);
+        border-left: 20px solid var(--amarilloprimario);
 
         z-index: 10;
+        
     }
     .header__input:checked ~ .card-info {
         opacity: 100;
         transition: all .5s;
     }
+    
+    .header__label::after {
+        content: "close";
+        position: absolute;
+        background-color: rgb(171, 171, 171);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        
+        opacity: 0;
+        transform: translateY(-50%) rotateX(90deg);
+        transition: .5s;
+
+        font-family: var(--fonttittle);
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__label::before {
+        content: "show";
+        position: absolute;
+        background-color: rgb(171, 171, 171);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        
+        opacity: 0;
+        transform: translateY(50%) rotateX(90deg);
+
+        transition: .5s;
+
+        font-family: var(--fonttittle);
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .header__input:checked ~ .header__label::after {
+        transform-origin: right;
+        transform: translateY(-50%) rotateX(90deg)
+    }
+
     .explore__input1:checked ~ .card-info{
         opacity: 100;
         transition: all .5s;
@@ -305,6 +419,7 @@
         opacity: 100;
         transition: all .5s;
     }
+
     }
     
 /* ! Arreglar botones READ MORE ABSOLUTOS,   OK
