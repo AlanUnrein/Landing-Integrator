@@ -1,0 +1,321 @@
+/*  Desktop >769px */
+
+    .header {
+        background-color: var(--negrosecundario);
+        width: 100%;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        margin: 0 auto; 
+        padding: 30px 50px;
+        height: 70px;
+        max-width: 1920px;
+        width: 100%;
+        background-color: var(--negrosecundario);
+
+        z-index: 20;
+    }
+    .nav__logo {
+        width: 25px;
+    }
+
+    /* Nav menu */
+
+    .nav__input {
+        display: none;
+    }
+    .nav__label {
+        display: none;
+    }
+    .nav__icon {
+        font-size: 36px;
+        color: white;
+    }
+
+/* close nav menu */
+
+    .navlist__ul {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 60px;
+    }
+    .navlist__link {
+        font-family: var(--fontnav);
+        color: white;
+
+        position: relative;
+    }
+    .navlist__link::before {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+
+        content: '';
+        display: inline-block;
+        background-color: var(--amarilloprimario);
+        height: 10px;
+        width: 100%;   
+        opacity: 0;
+    }
+    .navlist__link:hover::before {
+        opacity: 1;
+        transition: .5s;
+    }
+
+
+/* Background img + card container */
+
+    .header__container {
+        position: relative;
+    }
+
+/* Cards container  */
+
+    .card-info /* Global */ {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 30px;
+
+        position: relative;
+
+        width: 500px;
+        min-width: 20vw;
+        max-width: 90%;
+        padding: 30px;
+        border-top: 20px solid var(--amarilloprimario);
+
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+    .card-info__h2 {
+        font-family: var(--fonttittle);
+        font-size: 64px;
+        line-height: 64px;
+        text-transform: uppercase;
+
+        color: white;
+    }
+    .card-info__p {
+        font-family: var(--fontcard);
+
+        color: white;
+        padding-bottom: 30px;
+    }
+    .card-info__button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        padding: 10px 20px;
+        background-color: var(--negrosecundario);
+        border-right: 20px solid var(--amarilloprimario);
+    }
+    .card-info__readmore {
+        font-family: var(--fonttittle);
+        font-size: 12px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+/* Card header */
+
+    .card-info-header {
+        position: absolute;
+        top: 19.6%;
+        left: 5%;
+
+        background-color: rgba(0, 0, 0, 0.40);
+    }
+
+/*  Main   */
+
+/* Section Explore  */
+
+    .explore {
+    width: 100%;
+    }
+
+/* Article 1 and globals*/
+
+    .explore--1 {
+        position: relative;
+    }
+    .explore__h2  /* Global */ {
+        font-family: var(--fonttittle);
+        font-size: 45px;
+        letter-spacing: 5px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+        padding: 20px 0;
+        background-color: var(--negrosecundario);
+    }
+    .explore__card1 {
+        position: absolute;
+        top: 20%;
+        right: 10%;
+    }
+    .header__label, .explore__label1, .explore__label2, .explore__label3, .explore__label4 {
+        display: none;
+    }
+    .header__input, .explore__input1, .explore__input2, .explore__input3, .explore__input4 {
+        display: none;
+}
+
+/* Article 2 */
+
+    .explore--2 {
+        position: relative;
+    }
+    .explore__img2 {
+        transform: rotatey(180deg);
+    }
+    .explore__card2 {
+        position: absolute;
+        left: 15%;
+        top: 4.2%;
+    }
+
+/*  Article 3 */
+
+    .explore--3 {
+        position: relative;
+        height: 100%;
+    }
+    .explore__card3 {
+        position: absolute;
+        top: 14%;
+        right: 15%;
+    }
+
+/*  Article 4 */
+
+    .explore--4 {
+        position: relative;
+    }
+    .explore__img4 {
+        transform: rotateY(180deg);
+    }
+    .explore__card4 {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+
+/* ! Media queries  */
+
+/*  Tablet 481px\768px */
+
+/* Header  */
+
+    @media screen and (max-width: 768px){
+
+    .nav {
+        position: fixed;
+        top: 0;
+    }    
+    .nav__label {
+        display: inline-block;
+    }
+    .navlist {
+        display: none;
+    }
+    .header__container-img {
+        margin-top: 70px;
+    }
+
+    .card-info {
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: scroll;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: 100%;
+        padding: 0;
+        opacity: 0;
+    }
+    .card-info__h2 {
+        padding: 20vw 50px 0 50px;
+    }
+    .card-info__p {
+        padding: 30px 50px 30px 50px;
+    }
+    .card-info__button {
+        position: static;
+        width: 150px;
+    }
+    .header__container {
+        background-image: url(./img/1.png);
+        background-position: center;
+        background-size: cover;
+    }
+    }
+
+/*  Botones tipo checked de info para mobil y tablet */
+
+    @media screen and (max-width: 768px){
+
+    .header__label, .explore__label1, .explore__label2, .explore__label3, .explore__label4 {
+        display: inline;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+
+        font-family: var(--fonttittle);
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        
+        padding: 10px 20px;
+        width: 150px;
+        background-color: var(--negrosecundario);
+        border-right: 20px solid var(--amarilloprimario);
+
+        z-index: 10;
+    }
+    .header__input:checked ~ .card-info {
+        opacity: 100;
+        transition: all .5s;
+    }
+    .explore__input1:checked ~ .card-info{
+        opacity: 100;
+        transition: all .5s;
+    }
+    .explore__input2:checked ~ .card-info{
+        opacity: 100;
+        transition: all .5s;
+    }
+    .explore__input3:checked ~ .card-info{
+        opacity: 100;
+        transition: all .5s;
+    }
+    .explore__input4:checked ~ .card-info{
+        opacity: 100;
+        transition: all .5s;
+    }
+    }
+    
+/* ! Arreglar botones READ MORE ABSOLUTOS,   OK
+CORREGIR FUENTES DEL CARD INFO, 
+AGREGAR LA LISTA AL MENU CHECK 
+ICONOS LOGIN Y REGISTER
+PAGINA LOGIN REGISTER
+SECCION GALLERY
+SECCION CONTACT
+FOOTER
+
+ANIMACIONES
+HOVERS
+MEDIAS */
