@@ -31,7 +31,7 @@
                     <li class="nav__menu-li"> <a href="#explore" class="nav__menu-link" >explore</a> </li> 
                     <li class="nav__menu-li"> <a href="#gallery" class="nav__menu-link" >gallery</a> </li> 
                     <li class="nav__menu-li"> <a href="#contact" class="nav__menu-link" >contact</a> </li> 
-                    <li class="nav__menu-li"> <a href="./login.html" class="nav__menu-link" >login</a> </li> 
+                    <li class="nav__menu-li"> <a target="_blank" href="./login.html" class="nav__menu-link" >login</a> </li> 
                 </ul>
             </div>
             <div class="navlist">
@@ -130,7 +130,8 @@
                 </article>
             </section>
         </div>    
-        <div class="bordersection">  
+
+        <div class="bordersection">   <!--  Bordes amarillos -->
             <section class="gallery" id="gallery">
                 <div class="gallery__h2--contain">
                     <h2 class="gallery__h2">Pictures of the week</h2>
@@ -160,7 +161,8 @@
                         </div>
                             
                         <div class="contact__box">
-                                <input class="contact__input" type="mail" id="mail" required>
+                            <!--  Si pongo type email me dejan de funcionar las pseudoclases y se rompe el input, no se por que -->
+                                <input class="contact__input" type="text" id="mail" required>
                                 <label class="contact__label" for="mail">E-mail</label>
                         </div>    
 
@@ -176,6 +178,7 @@
             </section>
         </div>
     </main>
+<!--  Footer -->    
     <footer class="footer">
         <div class="footer__list">
             <div class="footer__list--container">
@@ -193,7 +196,7 @@
             <div class="footer__list--container">
                 <h2 class="footer__h2">about us</h2>
                 <ul class="footer__ul">   
-                    <li class="footer__item"><a href="#">Authors and photographers</a> </li>
+                    <li class="footer__item"><a href="#">Photographers</a> </li>
                     <li class="footer__item"><a href="#">Partners</a> </li>
                     <li class="footer__item"><a href="#">Society</a> </li>
                     <li class="footer__item"><a href="#">Explorers</a> </li>

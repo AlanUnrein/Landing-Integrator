@@ -2,11 +2,7 @@
 
 /* Register only */
 
-    .register__container {
-        height: calc(100vh - 70px);
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+
     .register {
         grid-column: 2;
         grid-row: 1;
@@ -44,7 +40,7 @@
 
 /*   Login and Register */
 
-    .login__container {
+    .login__container, .register__container {
         height: calc(100vh - 70px);
         display: grid;
         grid-template-columns: 50% 50%;
@@ -74,7 +70,7 @@
     .login__h2, .register__h2 {
         text-align: center;
         padding: 30px 0;
-        font-family: var(--fontcontact);
+        font-family: var(--fonttittle);
         font-size: 30px;
         text-transform: uppercase;
         color: var(--amarilloprimario);
@@ -87,7 +83,7 @@
         width: 100%;
         padding: 10px 0;
         
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         font-size: 18px;
         color: white;
 
@@ -102,7 +98,7 @@
         left: 0;
         padding: 10px 0;
 
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         font-size: 16px;
         color: var(--amarilloprimario);
     }
@@ -121,7 +117,7 @@
         display: inline-block;
     }
     .login__button--input, .register__button--input {
-        font-family: var(--fonttittle);
+        font-family: var(--fonttittle2);
         color: rgb(0, 0, 0);
 
         background-color: var(--amarilloprimario);
@@ -149,18 +145,18 @@
 
     .login__check {
         padding: 1px 0;
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         color: var(--amarilloprimario);
     }
     .login__check--link {
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         color: white;
     }
     .login__check--link:hover {
         border-bottom: 1px solid rgb(181, 181, 181);
     }
     .login__register {
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         text-align: center;
         color: var(--amarilloprimario);
         padding: 30px 0;
@@ -187,11 +183,13 @@
     }
     .welcome__h2, .hello__h2 {
         font-family: var(--fonttittle);
+        font-weight: 900;
         font-size: 50px;
         letter-spacing: 8px;
     }
     .welcome__p, .hello__p {
         font-family: var(--fonttittle);
+        font-weight: 900;
         font-size: 35px;
         letter-spacing: 8px;
     }
@@ -212,14 +210,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
         margin: 0 auto; 
         padding: 30px 50px;
         height: 70px;
         max-width: 1920px;
         width: 100%;
         background-color: var(--negrosecundario);
-
         z-index: 20;
     }
     .nav__logo {
@@ -259,8 +255,11 @@
         gap: 60px;
     }
     .navlist__link {
-        font-family: var(--fontnav);
+        font-family: var(--fontsecondary);
+        font-weight: 400;
+        text-transform: uppercase;
         color: white;
+        font-size: 14px;
 
         position: relative;
     }
@@ -309,14 +308,17 @@
     }
     .card-info__h2 {
         font-family: var(--fonttittle);
-        font-size: 64px;
+        font-weight: 900;
+        font-size: 60px;
         line-height: 64px;
         text-transform: uppercase;
         color: white;
     }
     .card-info__p {
         font-family: var(--fontcard);
-        color: white;
+        font-weight: 300;
+        font-size: 17px;
+        color: rgb(217, 217, 217);
         margin-bottom: 30px;
     }
 /*  Card button and hover */   
@@ -333,7 +335,7 @@
         overflow: hidden;
     }
     .card-info__readmore {
-        font-family: var(--fonttittle);
+        font-family: var(--fontsecondary);
         font-size: 12px;
         text-transform: uppercase;
         color: white;
@@ -390,7 +392,7 @@
         }
         .explore__sticky--absolute {
             position: absolute;
-            top: 93px;
+            top: 108px;
             left: 10px;
             bottom: 0;
             z-index: 100;
@@ -401,8 +403,8 @@
             display: flex;
             gap: 20px;
             
-            font-family: var(--fontnav);
-            font-size: 12px;
+            font-family: var(--fontsecondary);
+            font-size: 14px;
             color: rgb(255, 255, 255);
             text-transform: uppercase;
             text-align: center;
@@ -412,10 +414,10 @@
             background-color: rgba(0, 0, 0, 0.167);
             backdrop-filter: blur(5px);
             border: 2px solid white;
-            padding: 30px 15px;
+            padding: 35px 20px;
         }    
         .explore__arrow {
-            font-size: 15px;
+            font-size: 18px;
             animation: arrow infinite .5s ease-in-out alternate;
            }
 
@@ -436,7 +438,8 @@
         }
         .explore__h2  /* Global */ {
             font-family: var(--fonttittle);
-            font-size: 45px;
+            font-weight: 900;
+            font-size: 50px;
             letter-spacing: 5px;
             color: white;
             text-align: center;
@@ -535,7 +538,8 @@
         height: 250px;
     }
     .gallery__h2 {
-        font-family: var(--fonttittle);
+        font-family: var(--fonttittle2);
+        font-weight: 700;
         font-size: 56px;
         text-transform: uppercase;
         text-align: center;
@@ -586,7 +590,7 @@
         transform: translate(-50%,-50%);
         display: block;
 
-        font-family: var(--fonttittle);
+        font-family: var(--fontsecondary);
         text-transform:uppercase;
         font-size: 14px;
         color: white;
@@ -691,14 +695,16 @@
     }
 
     .contact__h2 {
-        font-family: var(--fontcontact);
+        min-width: min-content;
+        max-width: max-content;
+        padding-right: 20px;
+        font-family: var(--fonttittle2);
         font-size: 55px;
         color: white;
         white-space: nowrap;
         text-transform: uppercase;
         text-shadow: 0px 0px 13px rgba(0,0,0,0.49);
         border-right: 50px solid var(--amarilloprimario);
-        width: 400px;
         margin-bottom: 50px;
     }
 
@@ -712,7 +718,7 @@
         width: 100%;
         padding: 10px 0;
         
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         text-shadow: 0px 0px 13px rgba(0,0,0,0.49);
         font-size: 18px;
         color: white;
@@ -731,7 +737,7 @@
         left: 0;
         padding: 10px 0;
 
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
         font-size: 16px;
         color: white;
     }
@@ -750,7 +756,8 @@
         box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
     }
     .contact__button--input {
-        font-family: var(--fontcontact);
+        font-family: var(--fontsecondary);
+        font-weight: 400;
         color: rgb(0, 0, 0);
 
         background-color: rgb(255, 255, 255);
@@ -802,13 +809,14 @@
 /*  text  */
 
     .footer__h2 {
-        font-family: var(--fontfooter);
+        font-family: var(--fonttittle2);
+        letter-spacing: -1px;
         font-size: 20px;
         text-transform: uppercase;
         color: white;
     }
     .footer__item {
-        font-family: var(--fontfooter);
+        font-family: var(--fontsecondary);
         color:white;
         padding: 5px;
     }
@@ -817,12 +825,12 @@
         color: white;
     }
     .footer__condition--li {
-        font-family: var(--fontfooter);
+        font-family: var(--fontsecondary);
         text-transform:initial;
         color: white;
     }
     .footer__copyright {
-        font-family: var(--fontfooter);
+        font-family: var(--fonttittle2);
         text-transform: uppercase;
         color: white;
         padding: 10px;
@@ -1178,9 +1186,6 @@
         letter-spacing: 8px;
     }
 
-
-
-
 /* Home section */
 
     .card-info__h2 {
@@ -1191,7 +1196,8 @@
         padding: 7px;
     }
     .explore__h2 {
-        font-size: 15px;
+        font-size: 16px;
+        white-space: nowrap;
     }
     .explore__label--button {
         height: 30px;
@@ -1235,7 +1241,7 @@ PAG LOGIN REGISTER   OK FULL
 add
 
 BOX STICKY  OK 
-FONTS VAR
+FONTS VAR    OK
 RESIZE IMG
 
 inspec
