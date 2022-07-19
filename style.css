@@ -183,7 +183,7 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        padding: 5vh 15vw;
+        padding: 5vh 12vw;
     }
     .welcome__h2, .hello__h2 {
         font-family: var(--fonttittle);
@@ -863,9 +863,8 @@
         display: inline-block;
     }
     .nav__menu {
-        
         position: absolute;
-        top: 70px;
+        top: 69px;
         padding-bottom: 70px; /* Corregir nav fixed */
         left: 0;
         transform: translatex(-5000px);
