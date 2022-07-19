@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="./img/Logo.png" alt="LogoNW" class="nav__img">
+            </a>
+            <input class="nav__input" type="checkbox" id="menu">
+            <label class="nav__label" for="menu">
+                <i class="nav__icon fa-solid fa-bars"></i>
+            </label>
+            <label class="nav__label--close" for="menu">
+                <i class="fa-solid fa-x nav__icon--close"></i>
+            </label>
+            <div class="nav__menu">
+                <ul class="nav__menu-ul">
+                    <li class="nav__menu-li"> <a href="./index.html" class="nav__menu-link" >home</a> </li> 
+                    <li class="nav__menu-li"> <a href="./index.html#explore" class="nav__menu-link" >explore</a> </li> 
+                    <li class="nav__menu-li"> <a href="./index.html#gallery" class="nav__menu-link" >gallery</a> </li> 
+                    <li class="nav__menu-li"> <a href="./index.html#contact" class="nav__menu-link" >contact</a> </li> 
+                    <li class="nav__menu-li"> <a href="./login.html" class="nav__menu-link" >login</a> </li> 
+                </ul>
+            </div>
+            <div class="navlist">
+                <ul class="navlist__ul">
+                    <li class="navlist__li">
+                            <a href="./index.html" class="navlist__link">Home</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./index.html#explore" class="navlist__link">Explore</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./index.html#gallery" class="navlist__link">Gallery</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./index.html#contact" class="navlist__link">Contact</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./login.html" class="navlist__link"><img style="height: 25px;" src="./img/user.png" alt="Login"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="login__container">
+            <section class="login">
+                <h2 class="login__h2">Account Login</h2>
+                <form class="login__form">
+                    
+                    <div class="login__box">
+                        <input type="text" class="login__input" id="user" required>
+                        <label class="login__label" for="user">Account</label>
+                    </div>    
+
+                    <div class="login__box">
+                        <input type="password" class="login__input" id="password" required>
+                        <label class="login__label" for="password">Password</label>
+                    </div>    
+
+                    <div class="login__forget">
+                        <div class="login__checkbox">
+                            <input type="checkbox" id="check">
+                            <label class="login__check" for="check">Remember me</label>
+                        </div>
+                        <a href="#" target="_blank" class="login__check--link">Forgot your password?</a>
+                    </div>
+                    <div class="login__button">    
+                        <input type="submit" class="login__button--input" id="loginbutton" value="Sign in" required>
+                    </div>
+                </form>
+                <p class="login__register">Don't Have Account?<span> <a class="login__register--link" href="./register.html">Sign Up Now</a></span></p>
+            </section>
+            <section class="welcome">
+                <h2 class="welcome__h2">Welcome!</h2>
+                <p class="welcome__p">Log in with your data to enter the site. If you are not subscribed you can do it right now by giving this <a style="border-bottom: 1px solid black;" href="./register.html">Link</a>.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

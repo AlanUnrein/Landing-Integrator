@@ -10,6 +10,7 @@
     --fontnav: ;
     --fontcard: ;
     --fontfooter: ;
+    --fontcontact: ;
 }
 
 
@@ -21,6 +22,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: baseline;
+  
 }
 
 /* Evitamos problemas con las imagenes */

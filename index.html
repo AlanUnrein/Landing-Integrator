@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="gallery.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="media.css">
 </head>
+<body>
     <header class="header">
         <nav class="nav">
             <a href="#" class="nav__logo">
@@ -22,20 +22,22 @@
             <label class="nav__label" for="menu">
                 <i class="nav__icon fa-solid fa-bars"></i>
             </label>
+            <label class="nav__label--close" for="menu">
+                <i class="fa-solid fa-x nav__icon--close"></i>
+            </label>
             <div class="nav__menu">
                 <ul class="nav__menu-ul">
                     <li class="nav__menu-li"> <a href="#home" class="nav__menu-link" >home</a> </li> 
                     <li class="nav__menu-li"> <a href="#explore" class="nav__menu-link" >explore</a> </li> 
                     <li class="nav__menu-li"> <a href="#gallery" class="nav__menu-link" >gallery</a> </li> 
                     <li class="nav__menu-li"> <a href="#contact" class="nav__menu-link" >contact</a> </li> 
-                    <li class="nav__menu-li"> <a href="#login" class="nav__menu-link" >login</a> </li> 
-                    <li class="nav__menu-li"> <a href="#register" class="nav__menu-link" >register</a> </li> 
+                    <li class="nav__menu-li"> <a href="./login.html" class="nav__menu-link" >login</a> </li> 
                 </ul>
             </div>
             <div class="navlist">
                 <ul class="navlist__ul">
                     <li class="navlist__li">
-                            <a href="#home" class="navlist__link">Home</a>
+                            <a href="#" class="navlist__link">Home</a>
                     </li>
                     <li class="navlist__li">
                             <a href="#explore" class="navlist__link">Explore</a>
@@ -47,18 +49,15 @@
                             <a href="#contact" class="navlist__link">Contact</a>
                     </li>
                     <li class="navlist__li">
-                            <a href="#" class="navlist__link">Login</a>
-                    </li>
-                    <li class="navlist__li">
-                            <a href="#" class="navlist__link">Register</a>
+                            <a href="./login.html" target="_blank"  class="navlist__link"><img style="height: 25px;" src="./img/user.png" alt="Login"></a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="header__container">
-            <input class="header__input" type="checkbox" id="ver">
-            <label class="header__label" for="ver">show</label>
-            <img src="./img/1.png" alt="mountain" class="header__container-img">
+            <input class="header__input explore__input--checked" type="checkbox" id="ver">
+            <label class="header__label explore__label--button" for="ver"></label>
+            <img src="./img/background/1.png" alt="mountain" class="header__container-img">
             <div class="card-info-header card-info">
                 <h2 class="card-info__h2">enter the wild</h2>
                 <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, itaque sint quo   aperiam distinctio iusto, facere illum harum porro animi laudantium ipsa at similique ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, tempore?</p>
@@ -68,64 +67,159 @@
             </div>
         </div>
     </header>
+    <main class="main main__login">
+        <div class="explore__sticky--container">
+                <div class="explore__sticky--absolute">
+                    <div class="explore__sticky">
+                        <i class="explore__arrow fa-solid fa-arrow-up-long"></i>
+                        <span>read more articles</span>
+                    </div>
+                </div>
+            <section class="explore" id="explore">
+                <h2 class="explore__h2">explore the nature</h2>
+                <article class="explore--1">
+                    <input class="explore__input1 explore__input--checked" type="checkbox" id="ver1">
+                    <label class="explore__label1 explore__label--button" for="ver1"></label>
+                    <img src="./img/background/2.png" alt="birds" class="explore__img1">
+                    <div class="explore__card1 card-info">
+                        <h2 class="card-info__h2">between feathers</h2>
+                        <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ducimus! Libero blanditiis beatae iste quasi. Quas esse veritatis optio iure, vel sapiente quaerat libero cum, molestias obcaecati recusandae omnis earum sit vitae debitis sint porro ipsam? Fugit, quo reiciendis ratione quis architecto natus? Facere perspiciatis aperiam dolore? Consequuntur, molestiae doloremque esse quas fuga officia itaque sunt aperiam repellendus quasi soluta accusantium odio quia eveniet. Totam, deleniti sed praesentium expedita ratione quos aspernatur fuga deserunt. Recusandae, error. Excepturi dolorem magnam, corrupti accusantium veniam incidunt molestias eligendi eveniet deserunt fugit sed provident delectus, veritatis harum, eum mollitia natus iure odio ratione aperiam?.</p>
+                        <button class="card-info__button">
+                            <a href="#" class="card-info__readmore">Read More</a>
+                        </button>
+                    </div>
+                </article>
+                <h2 class="explore__h2">the blue wild</h2>
+                <article class="explore--2">
+                    <input class="explore__input2 explore__input--checked" type="checkbox" id="ver2">
+                    <label class="explore__label2 explore__label--button" for="ver2"></label>
+                    <img src="./img/background/3.png" alt="fish" class="explore__img2">
+                    <div class="explore__card2 card-info">
+                        <h2 class="card-info__h2">deep in the sea</h2>
+                        <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat modi consectetur? Labore recusandae doloribus necessitatibus illo consectetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate praesentium doloremque ex in consectetur. </p>
+                        <button class="card-info__button">
+                            <a href="#" class="card-info__readmore">Read More</a>
+                        </button>
+                    </div>
+                </article>
+                <h2 class="explore__h2">our white cold</h2>
+                <article class="explore--3">
+                    <input class="explore__input3 explore__input--checked" type="checkbox" id="ver3">
+                    <label class="explore__label3 explore__label--button" for="ver3"></label>
+                    <img src="./img/background/4.png" alt="antartic" class="explore__img3">
+                    <div class="explore__card3 card-info">
+                        <h2 class="card-info__h2">feel the antartic</h2>
+                        <p class="card-info__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus earum quia reiciendis a ipsa dolores facilis eaque enim eveniet suscipit, optio quidem officia quasi quae, numquam error aliquam vel deserunt similique pariatur? Atque error et ad dolores odit ducimus, placeat sed explicabo, sapiente non dicta asperiores dignissimos, voluptate ea soluta inventore! Enim fuga officia, porro accusamus facilis facere numquam iusto! </p>
+                        <button class="card-info__button">
+                            <a href="#" class="card-info__readmore">Read More</a>
+                        </button>
+                    </div>
+                </article>
+                <h2 class="explore__h2">big footsteps</h2>
+                <article class="explore--4">
+                    <input class="explore__input4 explore__input--checked" type="checkbox" id="ver4">
+                    <label class="explore__label4 explore__label--button" for="ver4"></label>
+                    <img src="./img/background/5.jpg" alt="africa" class="explore__img4">
+                    <div class="explore__card4 card-info">
+                        <h2 class="card-info__h2">the free savannah</h2>
+                        <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, in aspernatur repudiandae id temporibus minus quisquam sequi ratione, ut enim molestias expedita aperiam voluptatibus, eveniet voluptate libero natus alias iusto vel ullam veniam. Magnam soluta esse cum nesciunt sint debitis facere hic odit? Alias itaque rerum voluptate omnis deleniti placeat consequuntur, voluptatibus debitis atque fuga, fugit dignissimos! Architecto velit nihil alias cupiditate explicabo ipsa excepturi!</p>
+                        <button class="card-info__button">
+                            <a href="#" class="card-info__readmore">Read More</a>
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </div>    
+        <div class="bordersection">  
+            <section class="gallery" id="gallery">
+                <div class="gallery__h2--contain">
+                    <h2 class="gallery__h2">Pictures of the week</h2>
+                </div>
+                <div class="gallery__container">
+                    <div class="gallery__item1 gallery__item"><img src="img/gallery/1.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item2 gallery__item"><img src="img/gallery/2.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item3 gallery__item"><img src="img/gallery/3.jpg" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item4 gallery__item"><img src="img/gallery/4.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item5 gallery__item"><img src="img/gallery/5.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item6 gallery__item"><img src="img/gallery/6.jpg" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item7 gallery__item"><img src="img/gallery/7.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item8 gallery__item"><img src="img/gallery/8.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item9 gallery__item"><img src="img/gallery/9.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a> </div>
+                    <div class="gallery__item10 gallery__item"><img src="img/gallery/10.jpg" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a></div>
+                    <div class="gallery__item11 gallery__item"><img src="img/gallery/11.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a></div>
+                    <div class="gallery__item12 gallery__item"><img src="img/gallery/12.png" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a></div>
+                    <div class="gallery__item13 gallery__item"><img src="img/gallery/13.jpg" alt="description" class="gallery__img"> <a href="#" class="gallery__link">share</a></div>
+                    </div>
+            </section>
+            <section class="contact" id="contact">
+                    <h2 class="contact__h2">contact us</h2>
+                    <form class="contact__form">
+                        <div class="contact__box">
+                            <input class="contact__input" type="text" id="name" required>
+                            <label class="contact__label"  for="name">Name</label>
+                        </div>
+                            
+                        <div class="contact__box">
+                                <input class="contact__input" type="mail" id="mail" required>
+                                <label class="contact__label" for="mail">E-mail</label>
+                        </div>    
 
-    <main class="main">
-        <section class="explore" #explore>
-            <h2 class="explore__h2">explore the nature</h2>
-            <article class="explore--1">
-                <input class="explore__input1" type="checkbox" id="ver1">
-                <label class="explore__label1" for="ver1">show</label>
-                <img src="./img/2.png" alt="birds" class="explore__img1">
-                <div class="explore__card1 card-info">
-                    <h2 class="card-info__h2">between feathers</h2>
-                    <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ducimus! Libero blanditiis beatae iste quasi. Quas esse veritatis optio iure, vel sapiente quaerat libero cum, molestias obcaecati recusandae omnis earum sit vitae debitis sint porro ipsam? Fugit, quo reiciendis ratione quis architecto natus? Facere perspiciatis aperiam dolore? Consequuntur, molestiae doloremque esse quas fuga officia itaque sunt aperiam repellendus quasi soluta accusantium odio quia eveniet. Totam, deleniti sed praesentium expedita ratione quos aspernatur fuga deserunt. Recusandae, error. Excepturi dolorem magnam, corrupti accusantium veniam incidunt molestias eligendi eveniet deserunt fugit sed provident delectus, veritatis harum, eum mollitia natus iure odio ratione aperiam?.</p>
-                    <button class="card-info__button">
-                        <a href="#" class="card-info__readmore">Read More</a>
-                    </button>
-                </div>
-            </article>
-            <h2 class="explore__h2">the blue wild</h2>
-            <article class="explore--2">
-                <input class="explore__input2" type="checkbox" id="ver2">
-                <label class="explore__label2" for="ver2">show</label>
-                <img src="./img/3.png" alt="fish" class="explore__img2">
-                <div class="explore__card2 card-info">
-                    <h2 class="card-info__h2">deep in the sea</h2>
-                    <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat modi consectetur? Labore recusandae doloribus necessitatibus illo consectetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate praesentium doloremque ex in consectetur. </p>
-                    <button class="card-info__button">
-                        <a href="#" class="card-info__readmore">Read More</a>
-                    </button>
-                </div>
-            </article>
-            <h2 class="explore__h2">our white cold</h2>
-            <article class="explore--3">
-                <input class="explore__input3" type="checkbox" id="ver3">
-                <label class="explore__label3" for="ver3">show</label>
-                <img src="./img/4.png" alt="antartic" class="explore__img3">
-                <div class="explore__card3 card-info">
-                    <h2 class="card-info__h2">feel the antartic</h2>
-                    <p class="card-info__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus earum quia reiciendis a ipsa dolores facilis eaque enim eveniet suscipit, optio quidem officia quasi quae, numquam error aliquam vel deserunt similique pariatur? Atque error et ad dolores odit ducimus, placeat sed explicabo, sapiente non dicta asperiores dignissimos, voluptate ea soluta inventore! Enim fuga officia, porro accusamus facilis facere numquam iusto! </p>
-                    <button class="card-info__button">
-                        <a href="#" class="card-info__readmore">Read More</a>
-                    </button>
-                </div>
-            </article>
-            <h2 class="explore__h2">big footsteps</h2>
-            <article class="explore--4">
-                <input class="explore__input4" type="checkbox" id="ver4">
-                <label class="explore__label4" for="ver4">show</label>
-                <img src="./img/5.jpg" alt="africa" class="explore__img4">
-                <div class="explore__card4 card-info">
-                    <h2 class="card-info__h2">the free savannah</h2>
-                    <p class="card-info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, in aspernatur repudiandae id temporibus minus quisquam sequi ratione, ut enim molestias expedita aperiam voluptatibus, eveniet voluptate libero natus alias iusto vel ullam veniam. Magnam soluta esse cum nesciunt sint debitis facere hic odit? Alias itaque rerum voluptate omnis deleniti placeat consequuntur, voluptatibus debitis atque fuga, fugit dignissimos! Architecto velit nihil alias cupiditate explicabo ipsa excepturi!</p>
-                    <button class="card-info__button">
-                        <a href="#" class="card-info__readmore">Read More</a>
-                    </button>
-                </div>
-            </article>
-        </section>
+                        <div class="contact__box">
+                                <input class="contact__input" type="text" id="message" required>
+                                <label class="contact__label" for="message">Message</label>
+                        </div>    
+
+                        <div class="contact__button">    
+                                <input type="submit" class="contact__button--input" id="contactbutton" value="Send" required>
+                        </div>
+                    </form>
+            </section>
+        </div>
     </main>
-<body>
-    
+    <footer class="footer">
+        <div class="footer__list">
+            <div class="footer__list--container">
+                <h2 class="footer__h2">discover</h2>    
+                <ul class="footer__ul">
+                    <li class="footer__item"><a href="#">Animals</a> </li>
+                    <li class="footer__item"><a href="#">Environment</a> </li>
+                    <li class="footer__item"><a href="#">History</a> </li>
+                    <li class="footer__item"><a href="#">Science</a> </li>
+                    <li class="footer__item"><a href="#">Trips</a> </li>
+                    <li class="footer__item"><a href="#">Photography</a> </li>
+                    <li class="footer__item"><a href="#">Space</a> </li>
+                </ul>    
+            </div>
+            <div class="footer__list--container">
+                <h2 class="footer__h2">about us</h2>
+                <ul class="footer__ul">   
+                    <li class="footer__item"><a href="#">Authors and photographers</a> </li>
+                    <li class="footer__item"><a href="#">Partners</a> </li>
+                    <li class="footer__item"><a href="#">Society</a> </li>
+                    <li class="footer__item"><a href="#">Explorers</a> </li>
+                </ul>                     
+            </div>
+            <div class="footer__list--container">
+                <h2 class="footer__h2">subscription</h2>    
+                <ul class="footer__ul">
+                    <li class="footer__item"><a href="#">Sign up for our newsletter</a> </li>
+                </ul>
+            </div>
+            <div class="footer__list--container">
+                <h2 class="footer__h2">Follow us</h2>    
+                <ul class="footer__ul--icons">
+                    <li class="footer__icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a> </li>
+                    <li class="footer__icons"><a href="#"><i class="fa-brands fa-twitter"></i></a> </li>
+                    <li class="footer__icons"><a href="#"><i class="fa-brands fa-instagram"></i></a> </li>
+                    <li class="footer__icons"><a href="#"><i class="fa-brands fa-youtube"></i></a> </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="footer__condition">
+            <li class="footer__condition--li"><a href="#">Term of use</a> </li>
+            <li class="footer__condition--li"><a href="#">Privacy policy</a> </li>
+        </ul>
+        <span class="footer__copyright">copyright © 2022 plagiodiplagio - all right reserved</span>
+    </footer>
 </body>
 </html>

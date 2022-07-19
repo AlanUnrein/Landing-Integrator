@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="./img/Logo.png" alt="LogoNW" class="nav__img">
+            </a>
+            <input class="nav__input" type="checkbox" id="menu">
+            <label class="nav__label" for="menu">
+                <i class="nav__icon fa-solid fa-bars"></i>
+            </label>
+            <label class="nav__label--close" for="menu">
+                <i class="fa-solid fa-x nav__icon--close"></i>
+            </label>
+            <div class="nav__menu">
+                <ul class="nav__menu-ul">
+                    <li class="nav__menu-li"> <a href="./index.html" class="nav__menu-link" >home</a> </li> 
+                    <li class="nav__menu-li"> <a href="./index.html#explore" class="nav__menu-link" >explore</a> </li> 
+                    <li class="nav__menu-li"> <a href="./index.html#gallery" class="nav__menu-link" >gallery</a> </li> 
+                    <li class="nav__menu-li"> <a href="./index.html#contact" class="nav__menu-link" >contact</a> </li> 
+                    <li class="nav__menu-li"> <a href="./login.html" class="nav__menu-link" >login</a> </li> 
+                </ul>
+            </div>
+            <div class="navlist">
+                <ul class="navlist__ul">
+                    <li class="navlist__li">
+                            <a href="./index.html" class="navlist__link">Home</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./index.html#explore" class="navlist__link">Explore</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./index.html#gallery" class="navlist__link">Gallery</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./index.html#contact" class="navlist__link">Contact</a>
+                    </li>
+                    <li class="navlist__li">
+                            <a href="./login.html" class="navlist__link"><img style="height: 25px;" src="./img/user.png" alt="Login"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="register__container">
+            <section class="register">
+                <h2 class="register__h2">Subscribe</h2>
+                <form class="register__form">
+                    
+                    <div class="register__box">
+                        <input type="text" class="register__input" id="name" required>
+                        <label class="register__label" for="name">Name</label>
+                    </div>    
+
+                    
+                    <div class="register__box">
+                        <input type="email" class="register__input" id="email" required>
+                        <label class="register__label" for="email">E-mail</label>
+                    </div>    
+                    
+                    <div class="register__box">
+                        <input type="password" class="register__input" id="password" required>
+                        <label class="register__label" for="password">Password</label>
+                    </div>    
+
+                    <div class="login__checkbox">
+                        <input type="checkbox" id="check" required>
+                        <label class="login__check" for="check">Accept terms and conditions</label>
+                    </div>
+
+                    <div class="register__button">    
+                        <input type="submit" class="register__button--input" id="loginbutton" value="Sign up">
+                    </div>
+
+                </form>
+            </section>
+            <section class="hello">
+                <h2 class="hello__h2">Hello!</h2>
+                <p class="hello__p">Subscribe to keep up to date with the new news, photographs, articles and blogs of our collaborators. To log in enter <a style="border-bottom: 1px solid black ;" href="./login.html">Here</a>.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
