@@ -243,13 +243,14 @@
         content: '';
         display: inline-block;
         background-color: var(--amarilloprimario);
-        height: 10px;
+        height: 0px;
         width: 100%;   
         opacity: 0;
     }
     .navlist__link:hover::before {
         opacity: 1;
         transition: .5s;
+        height: 10px;
     }
 /* Background img + card container */
     .header__container {
@@ -335,6 +336,33 @@
         background-color: rgba(0, 0, 0, 0.40);
     }
 /*  Main   */
+/* Float logo */    
+    .toup {
+        position: fixed;
+        bottom: 60px;
+        right: 30px;
+        z-index: 250;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.38);
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.38);
+    }
+    .toup--img {
+        box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.38) inset;
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.38) inset;
+        -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.38) inset;
+    }
+    .toup:hover {
+        animation: rotation 3s infinite;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.38);
+    }
+@keyframes rotation {
+    0% {
+        transform: rotatey(0);
+    }
+    0% {
+        transform: rotatey(360deg);
+    }
+}
 /* Section Explore  */
         .explore {
             width: 100%;
@@ -761,6 +789,9 @@
 /* ! Media queries MOBILE and 350px - 768px*/
 @media screen and (max-width: 768px){
 /* Header  */
+    .toup {
+        display: none;
+    }
 /* Login  */
     .login__container, .register__container {
         margin-top: 70px;
@@ -873,12 +904,6 @@
     }
     .card-info__button:active {
         background-color: rgb(61, 61, 61);
-    }
-/*  Header container */    
-    .header__container {
-        background-image: url(./img/1.png);
-        background-position: center;
-        background-size: cover;
     }
 /*  Botones tipo checked de info para mobil y tablet */
     .explore__label--button {
