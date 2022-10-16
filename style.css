@@ -338,6 +338,7 @@
 /*  Main   */
 /* Float logo */    
     .toup {
+        animation: bounce 1s infinite;
         position: fixed;
         bottom: 60px;
         right: 30px;
@@ -355,6 +356,18 @@
         animation: rotation 3s infinite;
         box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.38);
     }
+@keyframes bounce {
+    0% {
+        transform: translateY(10px);    
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
 @keyframes rotation {
     0% {
         transform: rotatey(0);
